@@ -5,7 +5,10 @@
         reduceRad = $('#reduce-radius'),
         create = $('.create'),
         maxRadius = 20,
-        minRadius = 0;
+        minRadius = 0,
+        bgColorInput = $('#bg-color'),
+        brColorInput = $('#border-color'),
+        codeResultArea = $('#code-result');
 
     increaseRad.on('click', function(){
 
@@ -25,6 +28,8 @@
         create.css({
             'border-radius' : newRadius
         })
+
+        updateResult();
 
     });
 
@@ -47,7 +52,41 @@
             'border-radius' : newRadius
         })
 
+        updateResult();
+
     });
+
+    bgColorInput.on('change', function() {
+       var newColor = '#' + $(this).val();
+        create.css({
+            'background-color' : newColor
+        });
+        updateResult();
+    });
+
+    brColorInput.on('change', function() {
+        var newColor = '#' + $(this).val();
+        create.css({
+            'border-color' : newColor
+        });
+        updateResult();
+    });
+
+    var updateResult = function() {
+        var borderRad = create.css('border-radius'),
+          bgcolor = create.css('background-color'),
+          brcolor = create.css('border-color');
+
+        codeResultArea.text(
+                '-moz-border-radius: ' + borderRad + ';\n' +
+                '-webkit-border-radius: ' + borderRad + ';\n' +
+                'border-radius: ' + borderRad + ';\n' +
+                'background-color: ' + bgcolor + ';' +
+                'border-color: ' + brcolor + ';\n'
+        );
+    };
+
+    updateResult();
 
 
 }());
