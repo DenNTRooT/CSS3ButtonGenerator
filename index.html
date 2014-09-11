@@ -43,12 +43,22 @@
                         <div class="col-md-7 text-center">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon">Step</span>
-                                <input type="text" class="form-control" value="1">
+                                <input type="text" class="form-control" id="step" value="1">
                             </div>
                         </div>
-
-
                     </div>
+
+                    <h3 class="text-center">Color</h3>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">Background</span>
+                        <input type="text" class="form-control color" id="bg-color" value="">
+                    </div><br>
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">Border</span>
+                        <input type="text" class="form-control color" id="border-color" value="">
+                    </div>
+
+
                 </div>
                 <div class="col-md-4 well well-sm">
                     <h3 class="text-center">Result</h3>
@@ -73,6 +83,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/jscolor/jscolor.js"></script>
 
         <script src="js/main.js"></script>
 
