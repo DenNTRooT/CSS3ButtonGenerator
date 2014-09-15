@@ -10,12 +10,13 @@
       this.textbox.on('keyup', $.proxy(this.settingText, this));
       this.bRadius.bind('slide', $.proxy(this.settingRadius, this));
       this.bSize.bind('slide', $.proxy(this.settingBorderSize, this));
+      this.borderColor.on('change', $.proxy(this.settingBorderColor, this));
+      this.backColor.on('change', $.proxy(this.settingBackColor, this));
       this.sendEmail.on('click', $.proxy(this.mailer, this));
     },
     setApp: function() {
       if (this.borderSizePosition == "no") {
         this.borderSizePosition = 1;
-        console.log( "hello" );
       };
       if (this.radiusPosition == "no") {
         this.radiusPosition = 4;
@@ -42,6 +43,8 @@
     email: $('.main-email input'),
     textbox: $('.setting-text-input input'),
     sendEmail: $('.main-send button'),
+    borderColor: $('.setting-borderColor-input input'),
+    backColor: $('.setting-backColor-input input'),
     radiusPosition: "no",
     borderSizePosition: "no",
     bRadius: $('#slider1'),
@@ -51,10 +54,22 @@
       this.button.text( text );
       if(text == "") {
         this.button.text('Hello!');
-        // this.textbox.val('Hello!');
         text = "Hello!";
       }
       this.codeHTML.val( '<button type="submit" class="my-btn">' + text + '</button>' );
+    },
+    settingBorderColor: function() {
+      var brColor = '#' + borderColor.value;
+      this.button.css('border-color', brColor);
+      this.settingCodeCSS();
+
+    },
+      settingBackColor: function() {
+      var bgColor = '#' + backColor.value;
+      this.button.css('background', bgColor);
+      this.settingCodeCSS();
+        console.log(bgColor);
+
     },
     settingRadius: function(event, ui) {
       this.button.css('border-radius', ui.value + 'px');
@@ -62,12 +77,12 @@
       this.settingCodeCSS();
     },
     settingBorderSize: function(event, ui) {
-      this.button.css('border', ui.value + 'px solid #3181b4');
+      this.button.css('border', ui.value + 'px solid #' + borderColor.value);
       this.borderSizePosition = ui.value;
       this.settingCodeCSS();
     },
     settingCodeCSS: function() {
-      this.codeCSS.val( '.my-btn {\n border-radius: ' + this.radiusPosition + 'px;\n border: ' + this.borderSizePosition +'px solid #3181b4;\n}' );
+      this.codeCSS.val( '.my-btn {\n border-radius: ' + this.radiusPosition + 'px;\n border: ' + this.borderSizePosition +'px solid #' + borderColor.value + ';\n background: #' + backColor.value + '; }' );
     },
     mailer: function(e) {
       e.preventDefault();

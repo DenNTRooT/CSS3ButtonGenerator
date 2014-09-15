@@ -108,7 +108,7 @@ main {
 		&-radius,
 		&-size,
 		&-text,
-        &-color,
+        &-backColor,
         &-borderColor{
 			@include clearfix;
 			&-label {
