@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CCS3 Button Generator</title>
-    <link rel="stylesheet" href="dest/css/main.min.css"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CCS3 Button Generator</title>
+  <link rel="stylesheet" href="dest/css/main.min.css"/>
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <![endif]-->
 
 </head>
 <body>
-<div class="wrapper">
-    <div class="help-wrapper">
-        <header>
-            <div class="container">
-                <div class="heading">
-                    <h1 class="heading-text">Css3 button generator</h1>
-                </div>
-            </div>
-        </header>
-        <main>
-            <div class="container">
-                <div class="wrap-content">
-                    <div class="setting">
-                        <div class="setting-heading">
-                            <h2>Options</h2>
-                        </div>
-                        <div class="setting-radius">
-                            <div class="setting-radius-label">
-                                <label>Border-radius</label>
+	<div class="wrapper">
+		<div class="help-wrapper">
+			<header>
+				<div class="container">
+					<div class="heading">
+						<h1 class="heading-text">Css3 button generator</h1>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="container">
+					<div class="wrap-content">
+						<div class="setting">
+							<div class="setting-heading">
+								<h2>Options</h2>
+							</div>
+							<div class="setting-radius">
+								<div class="setting-radius-label">
+									<label>Border-radius</label>
+								</div>
+								<div class="setting-radius-control">
+									<div id="slider1"></div>
+								</div>
+							</div>
+							<div class="setting-size">
+								<div class="setting-size-label">
+									<label>Border-size</label>
+								</div>
+								<div class="setting-size-control">
+									<div id="slider2"></div>
+								</div>
+							</div>
+                            <div class="setting-color">
+                                <div class="setting-color-label">
+                                    <label for="textColor">Color</label>
+                                </div>
+                                <div class="setting-text-input">
+                                    <input id="textColor" class="color" type="text" value="cccccc">
+                                </div>
                             </div>
-                            <div class="setting-radius-control">
-                                <div id="slider1"></div>
+                            <div class="setting-borderColor">
+                                <div class="setting-borderColor-label">
+                                    <label for="borderColor">Border Color</label>
+                                </div>
+                                <div class="setting-text-input">
+                                    <input id="borderColor" class="color" type="text" value="777777">
+                                </div>
                             </div>
-                        </div>
-                        <div class="setting-size">
-                            <div class="setting-size-label">
-                                <label>Border-size</label>
-                            </div>
-                            <div class="setting-size-control">
-                                <div id="slider2"></div>
-                            </div>
-                        </div>
-                        <div class="setting-color">
-                            <div class="setting-color-label">
-                                <label for="color">Color</label>
-                            </div>
-                            <div class="setting-color-input">
-                                <input id="color" class="color" type="text" value="cccccc">
-                            </div>
-                        </div>
-                        <div class="setting-bordercolor">
-                            <div class="setting-bordercolor-label">
-                                <label for="borderColor">Border-color</label>
-                            </div>
-                            <div class="setting-bordercolor-input">
-                                <input id="borderColor" class="color" type="text" value="777777">
-                            </div>
-                        </div>
-                        <div class="setting-text">
-                            <div class="setting-text-label">
-                                <label for="textInput">Text</label>
-                            </div>
-                            <div class="setting-text-input">
-                                <input id="textInput" type="text" placeholder="Button text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="result">
-                        <div class="result-heading">
-                            <h2>Result</h2>
-                        </div>
-                        <div class="result-btn">
-                            <button>Button text</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <section class="send-code">
-            <div class="container">
-                <div class="main-form">
-                    <form>
-                        <div class="main-html">
-                            <textarea name="html" placeholder="HTML code"></textarea>
-                        </div>
-                        <div class="main-css">
-                            <textarea name="css" placeholder="CSS code"></textarea>
-                        </div>
-                        <div class="main-email">
-                            <input type="text" name="email" placeholder="mail">
-                        </div>
-                        <div class="main-send">
-                            <button name="send">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
+							<div class="setting-text">
+								<div class="setting-text-label">
+									<label for="textInput">Text</label>
+								</div>
+								<div class="setting-text-input">
+									<input id="textInput" type="text" placeholder="Button text">
+								</div>
+							</div>
+						</div>
+						<div class="result">
+							<div class="result-heading">
+								<h2>Result</h2>
+							</div>
+							<div class="result-btn">
+								<button>Button text</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<section class="send-code">
+				<div class="container">
+					<div class="main-form">
+						<form>
+							<div class="main-html">
+								<textarea name="html" placeholder="HTML code"></textarea>
+							</div>
+							<div class="main-css">
+								<textarea name="css" placeholder="CSS code"></textarea>
+							</div>
+							<div class="main-email">
+								<input type="text" name="email" placeholder="mail">
+							</div>
+							<div class="main-send">
+								<button name="send">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
 <!-- === scripts === -->
 <script src="dest/js/jquery-1.11.1.min.js"></script>
-<script src="dest/js/jquery-ui.js"></script>
+<script src="dest/js/jquery-ui.min.js"></script>
 <script src="dest/js/build.min.js"></script>
 <script src="dest/js/jscolor/jscolor.js"></script>
 </body>

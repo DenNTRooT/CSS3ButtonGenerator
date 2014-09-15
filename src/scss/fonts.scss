@@ -1,28 +1,28 @@
 @font-face {
 	font-family: 'MyriadPro-font';
-	src: url('../../dest/fonts/MyriadPro/MyriadPro-font.eot?') format('eot'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-font.ttf') format('truetype'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-font.woff') format('woff'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-font.otf') format('opentype'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-font.svg#MyriadPro-font') format('svg');
+	src: url('../fonts/MyriadPro/MyriadPro-font.eot?') format('eot'),
+	url('../fonts/MyriadPro/MyriadPro-font.ttf') format('truetype'),
+	url('../fonts/MyriadPro/MyriadPro-font.woff') format('woff'),
+	url('../fonts/MyriadPro/MyriadPro-font.otf') format('opentype'),
+	url('../fonts/MyriadPro/MyriadPro-font.svg#MyriadPro-font') format('svg');
 }
 
 @font-face {
 	font-family: 'MyriadPro-Bold-font';
-	src: url('../../dest/fonts/MyriadPro/MyriadPro-Bold-font.eot?') format('eot'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-Bold-font.ttf') format('truetype'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-Bold-font.woff') format('woff'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-Bold-font.otf') format('opentype'),
-	url('../../dest/fonts/MyriadPro/MyriadPro-Bold-font.svg#MyriadPro-Bold-font') format('svg');
+	src: url('../fonts/MyriadPro/MyriadPro-Bold-font.eot?') format('eot'),
+	url('../fonts/MyriadPro/MyriadPro-Bold-font.ttf') format('truetype'),
+	url('../fonts/MyriadPro/MyriadPro-Bold-font.woff') format('woff'),
+	url('../fonts/MyriadPro/MyriadPro-Bold-font.otf') format('opentype'),
+	url('../fonts/MyriadPro/MyriadPro-Bold-font.svg#MyriadPro-Bold-font') format('svg');
 }
 
 @font-face {
 	font-family: 'SegoeUI-font';
-	src: url('../../dest/fonts/SegoeUI/SegoeUI-font.eot?') format('eot'),
-	url('../../dest/fonts/SegoeUI/SegoeUI-font.ttf') format('truetype'),
-	url('../../dest/fonts/SegoeUI/SegoeUI-font.woff') format('woff'),
-	url('../../dest/fonts/SegoeUI/SegoeUI-font.otf') format('opentype'),
-	url('../../dest/fonts/SegoeUI/SegoeUI-font.svg#SegoeUI-font') format('svg');
+	src: url('../fonts/SegoeUI/SegoeUI-font.eot?') format('eot'),
+	url('../fonts/SegoeUI/SegoeUI-font.ttf') format('truetype'),
+	url('../fonts/SegoeUI/SegoeUI-font.woff') format('woff'),
+	url('../fonts/SegoeUI/SegoeUI-font.otf') format('opentype'),
+	url('../fonts/SegoeUI/SegoeUI-font.svg#SegoeUI-font') format('svg');
 }
 
 @mixin segoe-r {

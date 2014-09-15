@@ -1,3 +1,268 @@
 @import 'fonts.scss';
 @import 'mixin.scss';
 @import 'jquery-ui.scss';
+
+$container-width: 1000px;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-weight: normal;
+	outline: none;
+}
+
+body {
+	background: #e5e5e5;
+	padding: 10px;
+}
+
+a img {
+	border: none;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	width: $container-width;
+	margin: auto;
+	@include clearfix;
+}
+
+.help-wrapper {
+	width: $container-width;
+	margin: auto;
+	@include clearfix;
+	background: #fff;
+	@include border-radius(7px);
+	@include box-shadow(0 0 3px #999);	
+}
+
+.wrapper {
+	width: $container-width + 20;
+	margin: auto;
+	@include clearfix;
+}
+
+
+/* === Стилизация ползунков === */
+#slider1,
+#slider2 {
+
+}
+/* === end Стилизация ползунков === */
+
+
+/* === header === */
+header {
+	.heading {
+		&-text {
+			text-align: center;
+			@include segoe-r;
+			font-size: 24px;
+			color: #000;
+			text-transform: uppercase;
+			line-height: 100px;
+			margin: -14px 0 8px;
+		}
+	}
+}
+/* === end header === */
+
+
+/* === main === */
+main {
+	@include clearfix;
+	.wrap-content {
+		width: 940px;
+		min-height: 238px;
+		@include clearfix;
+		border-bottom: 1px dashed #a1a1a1; 
+		margin: auto;
+	}
+	.setting {
+		@include clearfix;
+		width: 50%;
+		float: left;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: '';
+			width: 5px;
+			height: 234px;
+			background: url(../img/divider.png);
+			top: -14px;
+			right: -3px;
+		}
+		&-heading {
+			margin: 0 0 36px -31px;
+			h2 {
+				text-align: center;
+				@include segoe-r;
+				text-transform: uppercase;
+				font-size: 18px;
+			}
+		}
+		&-radius,
+		&-size,
+		&-text,
+        &-color,
+        &-borderColor{
+			@include clearfix;
+			&-label {
+				margin: 0 0 36px 0px;
+				width: 35%;
+				float: left;
+				@include segoe-r;
+				font-size: 18px;
+				label {
+					margin: -8px 10px 0 0;
+					float: right;
+				}
+			}
+			&-control {
+				width: 65%;
+				float: right;
+				#slider1,
+				#slider2 {
+					margin: 0 0 0 16px;
+				}
+			}
+			&-input {
+				input {
+					width: 210px;
+					height: 30px;
+					float: left;
+					border: 1px solid #e3e3e3;
+					@include placecolor(#727272);
+					color: #727272;
+					@include myriad-r;
+					padding: 5px 0 0 7px;
+					letter-spacing: -0.7px;
+					margin: -12px 0 0 15px;
+				}
+			}
+		}
+	}
+	.result {
+		width: 50%;
+		float: right;
+		@include clearfix;
+		&-heading {
+			h2 {
+				font-size: 18px;
+				text-transform: uppercase;
+				@include segoe-r;
+				text-align: center;
+				margin: 0 0 0 18px;
+			}
+		}
+		&-btn {
+			width: 140px;
+			margin: 67px 175px;
+			button {
+				box-sizing: content-box;
+				width: inherit;
+				height: 45px;
+				background: #37a1e4;
+				color: #fff;
+				border: none;
+				@include myriad-b;
+				@include border-radius(4px);
+				text-shadow: 0 1px 0 rgba(0,0,0,.32);
+				border: 1px solid #3181b4;
+				font-size: 16px;
+			}
+		}
+	}
+}
+/* === end main === */
+
+
+/* === form === */
+.send-code {
+	@include clearfix;
+	.main-form {
+		width: 100%;
+		@include clearfix;
+		margin: 46px 0 0;
+	}
+	.main-html,
+	.main-css {
+		@include clearfix;
+		width: 50%;
+		float: left;
+		@include clearfix;
+		textarea {
+			display: block;
+			width: 220px;
+			height: 110px;
+			color: #717171;
+			font-size: 12px;
+			margin: 0 7px;
+			float: right;
+			line-height: 22px;
+			@include placecolor(#717171);
+			padding: 5px 0 0 8px;
+			@include myriad-r;
+			resize: none;
+		}
+	}
+	.main-css {
+		textarea {
+			float: left;
+			margin: 0 11px 3px;
+		}
+	}
+	.main-email {
+		width: 220px;
+		margin: auto;
+		input {
+			margin: 15px 0;
+			padding: 0 0 0 5px;			
+			@include placecolor(#717171);
+			@include myriad-r;
+			width: inherit;
+			line-height: 31px;
+			height: 30px;
+		}
+	}
+	.main-send {
+		width: 109px;
+		margin: 0 auto 62px;
+		button {
+		width: inherit;
+		height: 38px;
+		line-height: 40px;
+			@include gradient(#8cc884, #60b355);
+			border-radius: 30px;
+			border: 1px solid #3b8e31;
+			color: #fff;
+			font-size: 14px;
+			@include border-radius(20px);
+			@include myriad-b;
+		}
+	}
+}
+/* === end form === */
+
+.ui-slider {
+	width: 208px;
+	height: 9px;
+	background: #828282;
+	@include border-radius(6px);
+	.ui-slider-handle {
+		width: 23px;
+		height: 23px;
+		margin-top: -2px;
+		background: url(../img/handle.png) no-repeat;
+		border: none;
+	}
+	.ui-slider-range {
+		background: #2b91d8;
+		@include border-radius(6px);
+		border: 1px solid #1f5b85;
+	}
+}
